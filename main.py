@@ -1,8 +1,7 @@
 def can_vote(age, citizenship, is_disqualified):
     if age < 18 or citizenship != "россия" or is_disqualified != "нет":
         return False
-    else:
-        return True
+    return True
 
 
 try:
@@ -12,4 +11,4 @@ try:
 
     print("Вы можете голосовать") if can_vote(age, citizenship, disqualified) else print("Вы не можете голосовать")
 except:
-    print("Веденные данные - некорректны")
+    print("Возраст указан некорректно")
