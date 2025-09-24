@@ -1,7 +1,7 @@
 def can_vote(age, citizenship, is_disqualified):
     if age < 18:
         return False
-    elif citizenship != "Россия":
+    elif citizenship != "россия":
         return False
     elif is_disqualified == True:
         return False
@@ -11,7 +11,7 @@ def can_vote(age, citizenship, is_disqualified):
 
 try:
     age = int(input("Введите ваш возраст: "))
-    citizenship = input("Введите страну, в которой у вас гражданство: ")
+    citizenship = input("Введите страну, в которой у вас гражданство: ").lower()
     disqualified_input = int(input("Дисквалифицированы ли вы с выборов (0 - нет, 1 - да): "))
     assert disqualified_input == 0 or disqualified_input == 1
 
